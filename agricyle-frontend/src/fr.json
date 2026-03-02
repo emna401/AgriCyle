@@ -1,0 +1,156 @@
+{
+  "app": {
+    "name": "AgriCycle",
+    "tagline": "Collecte des emballages agricoles & vente de produits recyclés"
+  },
+  "auth": {
+    "identifier": "Téléphone ou email",
+    "password": "Mot de passe",
+    "login": "Connexion",
+    "back": "Retour",
+    "forgot": "Mot de passe oublié ?",
+    "createAccount": "Créer un compte",
+    "haveAccount": "J'ai déjà un compte",
+    "sendOtp": "Envoyer OTP",
+    "resendOtp": "Renvoyer OTP",
+    "otp": "Code OTP",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer mot de passe",
+    "resetPassword": "Réinitialiser"
+  },
+  "common": {
+    "connected_as": "Connecté en tant que",
+    "refresh": "Actualiser",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "close": "Fermer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "download": "Télécharger",
+    "export": "Exporter"
+  },
+  "nav": {
+    "home": "Accueil",
+    "login": "Se connecter",
+    "register": "S'inscrire",
+    "logout": "Se déconnecter",
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "goodPractices": "Bonnes pratiques",
+    "catalog": "Catalogue",
+    "cart": "Panier",
+    "orders": "Mes commandes",
+    "declarations": "Mes déclarations",
+    "admin": "Admin",
+    "overview": "Vue d'ensemble",
+    "products": "Produits",
+    "users": "Utilisateurs"
+  },
+  "roles": {
+    "FARMER": "Agriculteur",
+    "BENEFICIARY": "Bénéficiaire",
+    "DUAL": "Mixte",
+    "ADMIN": "Admin",
+    "SUPERADMIN": "Super Admin"
+  },
+  "status": {
+    "ACTIVE": "Actif",
+    "PENDING": "En attente",
+    "SUSPENDED": "Suspendu",
+    "BLOCKED": "Bloqué"
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Tableau de Bord Administrateur",
+      "subtitle": "Supervision AgriCycle - Cartographie, statistiques et exports",
+      "connected_as": "Connecté en tant que"
+    },
+    "menu": {
+      "dashboard": "Tableau de Bord",
+      "declarations": "Déclarations",
+      "products": "Produits",
+      "orders": "Commandes",
+      "users": "Utilisateurs",
+      "administration": "Administration",
+      "overview": "Vue d'ensemble"
+    },
+    "stats": {
+      "farmers": "Agriculteurs",
+      "farmers_desc": "Comptes FARMER actifs",
+      "farmers_total": "+ {dual} DUAL = {total} agriculteurs totaux",
+      "beneficiaries": "Bénéficiaires",
+      "beneficiaries_desc": "Comptes BENEFICIARY actifs",
+      "beneficiaries_total": "+ {dual} DUAL = {total} bénéficiaires totaux",
+      "dual_users": "Utilisateurs DUAL",
+      "dual_users_desc": "Agriculteurs & Bénéficiaires",
+      "total_users": "Total Utilisateurs",
+      "total_users_desc": "Tous comptes actifs",
+      "declarations": "Déclarations",
+      "declarations_desc": "Total des déclarations reçues",
+      "orders": "Commandes",
+      "orders_desc": "Hors paniers abandonnés",
+      "revenue": "Revenu total",
+      "revenue_desc": "Depuis le lancement"
+    },
+    "map": {
+      "title": "Carte des utilisateurs",
+      "subtitle": "Localisation en Tunisie",
+      "loading": "🔄 Chargement de la carte...",
+      "click_marker": "📍 Cliquez sur un marqueur pour les détails",
+      "users_count": "{count} utilisateurs",
+      "legend_farmer": "Agriculteur",
+      "legend_beneficiary": "Bénéficiaire",
+      "legend_dual": "Dual"
+    },
+    "exports": {
+      "stats_title": "Rapports Statistiques",
+      "stats_subtitle": "Analyse complète de la plateforme",
+      "stats_type": "Détaillé",
+      "stats_features": [
+        "Statistiques par statut et région",
+        "Top produits et tendances mensuelles",
+        "Analyse détaillée des performances"
+      ],
+      "orders_title": "Rapports Commandes",
+      "orders_subtitle": "Historique et analyse des commandes",
+      "orders_type": "Commercial",
+      "orders_features": [
+        "Liste détaillée des commandes",
+        "Statut, montant et dates",
+        "Données clients et produits"
+      ],
+      "excel": "Excel (.xlsx)",
+      "pdf": "PDF",
+      "generating": "Génération..."
+    },
+    "errors": {
+      "load_stats": "Impossible de charger les statistiques",
+      "load_map": "Impossible de charger la carte des utilisateurs",
+      "export_excel_stats": "Erreur lors de l'export Excel des statistiques",
+      "export_pdf_stats": "Erreur lors de l'export PDF des statistiques",
+      "export_excel_orders": "Erreur lors de l'export Excel des commandes",
+      "export_pdf_orders": "Erreur lors de l'export PDF des commandes"
+    },
+    "connected_as": "Connecté en tant que"
+  },
+  "user": {
+    "role": "Rôle",
+    "status": "Statut",
+    "farm_name": "Nom de la ferme",
+    "governorate": "Gouvernorat",
+    "delegation": "Délégation",
+    "address": "Adresse",
+    "email": "Email",
+    "phone": "Téléphone",
+    "roles": {
+      "user": "Utilisateur",
+      "farmer": "Agriculteur",
+      "beneficiar": "Bénéficiaire",
+      "dual": "Agriculteur & Bénéficiaire (DUAL)"
+    }
+  }
+}

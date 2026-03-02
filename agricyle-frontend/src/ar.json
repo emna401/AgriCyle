@@ -1,0 +1,156 @@
+{
+  "app": {
+    "name": "AgriCycle",
+    "tagline": "جمع عبوات الفلاحة وبيع منتجات مُعاد تدويرها"
+  },
+  "auth": {
+    "identifier": "الهاتف أو البريد",
+    "password": "كلمة السر",
+    "login": "تسجيل الدخول",
+    "back": "رجوع",
+    "forgot": "نسيت كلمة السر؟",
+    "createAccount": "إنشاء حساب",
+    "haveAccount": "عندي حساب",
+    "sendOtp": "إرسال OTP",
+    "resendOtp": "إعادة إرسال OTP",
+    "otp": "رمز OTP",
+    "newPassword": "كلمة سر جديدة",
+    "confirmPassword": "تأكيد كلمة السر",
+    "resetPassword": "تغيير كلمة السر"
+  },
+  "common": {
+    "connected_as": "متصل كـ",
+    "refresh": "تحديث",
+    "loading": "جار التحميل...",
+    "error": "خطأ",
+    "success": "نجاح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "close": "إغلاق",
+    "edit": "تعديل",
+    "view": "عرض",
+    "download": "تحميل",
+    "export": "تصدير"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "login": "دخول",
+    "register": "تسجيل",
+    "logout": "خروج",
+    "dashboard": "لوحة التحكم",
+    "profile": "الملف الشخصي",
+    "goodPractices": "ممارسات جيدة",
+    "catalog": "المنتجات",
+    "cart": "السلة",
+    "orders": "طلباتي",
+    "declarations": "تصريحاتي",
+    "admin": "الإدارة",
+    "overview": "نظرة عامة",
+    "products": "المنتجات",
+    "users": "المستخدمون"
+  },
+  "roles": {
+    "FARMER": "فلاح",
+    "BENEFICIARY": "مستفيد",
+    "DUAL": "مشترك",
+    "ADMIN": "مشرف",
+    "SUPERADMIN": "مشرف رئيسي"
+  },
+  "status": {
+    "ACTIVE": "نشط",
+    "PENDING": "في الانتظار",
+    "SUSPENDED": "موقوف",
+    "BLOCKED": "محظور"
+  },
+  "admin": {
+    "dashboard": {
+      "title": "لوحة تحكم المشرف",
+      "subtitle": "إشراف AgriCycle - الخرائط والإحصائيات والتصدير",
+      "connected_as": "متصل كـ"
+    },
+    "menu": {
+      "dashboard": "لوحة التحكم",
+      "declarations": "التصريحات",
+      "products": "المنتجات",
+      "orders": "الطلبيات",
+      "users": "المستخدمون",
+      "administration": "الإدارة",
+      "overview": "نظرة عامة"
+    },
+    "stats": {
+      "farmers": "الفلاحون",
+      "farmers_desc": "حسابات الفلاحين النشطة",
+      "farmers_total": "+ {dual} مزدوج = {total} فلاحين إجمالاً",
+      "beneficiaries": "المستفيدون",
+      "beneficiaries_desc": "حسابات المستفيدين النشطة",
+      "beneficiaries_total": "+ {dual} مزدوج = {total} مستفيدين إجمالاً",
+      "dual_users": "المستخدمون المزدوجون",
+      "dual_users_desc": "فلاحون ومستفيدون",
+      "total_users": "إجمالي المستخدمين",
+      "total_users_desc": "جميع الحسابات النشطة",
+      "declarations": "التصريحات",
+      "declarations_desc": "إجمالي التصريحات المستلمة",
+      "orders": "الطلبيات",
+      "orders_desc": "باستثناء السلال المهجورة",
+      "revenue": "إجمالي الإيرادات",
+      "revenue_desc": "منذ الإطلاق"
+    },
+    "map": {
+      "title": "خريطة المستخدمين",
+      "subtitle": "الموقع في تونس",
+      "loading": "🔄 جاري تحميل الخريطة...",
+      "click_marker": "📍 اضغط على العلامة للحصول على التفاصيل",
+      "users_count": "{count} مستخدمين",
+      "legend_farmer": "فلاح",
+      "legend_beneficiary": "مستفيد",
+      "legend_dual": "مزدوج"
+    },
+    "exports": {
+      "stats_title": "تقارير إحصائية",
+      "stats_subtitle": "تحليل كامل للمنصة",
+      "stats_type": "مفصل",
+      "stats_features": [
+        "إحصائيات حسب الحالة والمنطقة",
+        "أفضل المنتجات والاتجاهات الشهرية",
+        "تحليل مفصل للأداء"
+      ],
+      "orders_title": "تقارير الطلبيات",
+      "orders_subtitle": "السجل وتحليل الطلبيات",
+      "orders_type": "تجاري",
+      "orders_features": [
+        "قائمة مفصلة بالطلبيات",
+        "الحالة والمبلغ والتواريخ",
+        "بيانات العملاء والمنتجات"
+      ],
+      "excel": "Excel (.xlsx)",
+      "pdf": "PDF",
+      "generating": "جاري التوليد..."
+    },
+    "errors": {
+      "load_stats": "تعذر تحميل الإحصائيات",
+      "load_map": "تعذر تحميل خريطة المستخدمين",
+      "export_excel_stats": "خطأ في تصدير الإحصائيات إلى Excel",
+      "export_pdf_stats": "خطأ في تصدير الإحصائيات إلى PDF",
+      "export_excel_orders": "خطأ في تصدير الطلبيات إلى Excel",
+      "export_pdf_orders": "خطأ في تصدير الطلبيات إلى PDF"
+    },
+    "connected_as": "متصل كـ"
+  },
+  "user": {
+    "role": "الدور",
+    "status": "الحالة",
+    "farm_name": "اسم المزرعة",
+    "governorate": "الولاية",
+    "delegation": "المعتمدية",
+    "address": "العنوان",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "roles": {
+      "user": "مستخدم",
+      "farmer": "فلاح",
+      "beneficiary": "مستفيد",
+      "dual": "فلاح ومستفيد (مزدوج)"
+    }
+  }
+}
