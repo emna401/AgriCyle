@@ -8,8 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-secret")
-DEBUG = os.getenv("DEBUG", "True").lower() == "true"
+DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
+# Correction: Ne pas écraser avec une liste statique
 ALLOWED_HOSTS = [h.strip() for h in os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if h.strip()]
 
 INSTALLED_APPS = [
@@ -22,6 +23,7 @@ INSTALLED_APPS = [
 
     "rest_framework",
     "corsheaders",
+    "rest_framework_simplejwt",  # Important !
 
     "accounts",
 ]
@@ -29,6 +31,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Pour les fichiers statiques
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -56,6 +59,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "agricyle_backend.wsgi.application"
 ASGI_APPLICATION = "agricyle_backend.asgi.application"
 
+# Configuration MySQL
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
@@ -63,8 +67,11 @@ DATABASES = {
         "USER": os.getenv("DB_USER", "root"),
         "PASSWORD": os.getenv("DB_PASSWORD", ""),
         "HOST": os.getenv("DB_HOST", "127.0.0.1"),
-        "PORT": os.getenv("DB_PORT", "3307"),
-        "OPTIONS": {"charset": "utf8mb4"},
+        "PORT": os.getenv("DB_PORT", "3306"),
+        "OPTIONS": {
+            "charset": "utf8mb4",
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",  # Recommandé pour Django
+        },
     }
 }
 
@@ -89,7 +96,10 @@ TIME_ZONE = "Africa/Tunis"
 USE_I18N = True
 USE_TZ = True
 
+# Fichiers statiques
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
@@ -97,19 +107,13 @@ MEDIA_ROOT = BASE_DIR / "media"
 # CORS
 cors_origins = os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:5173")
 CORS_ALLOWED_ORIGINS = [x.strip() for x in cors_origins.split(",") if x.strip()]
+CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS.copy()
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Configuration des emails dans Django
-
-
-# Configuration Resend
-RESEND_API_KEY = os.getenv("re_WHnUYuny_AJ7LPYHi7WySHuYopBtQCuTp")  # Votre clé API Resend
-DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", "Agricyle <agricyle@gmail.com>")
-
-# Initialiser Resend
-if RESEND_API_KEY:
-    resend.api_key = RESEND_API_KEY
+# Configuration Resend (corrigée !)
+RESEND_API_KEY = os.getenv("RESEND_API_KEY")  # Pas de clé en dur !
+DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", "Agricyle <noreply@agricyle.com>")
 
 if RESEND_API_KEY:
     print(f"🔑 Resend configuré: {RESEND_API_KEY[:10]}...")
